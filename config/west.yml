@@ -1,11 +1,25 @@
 manifest:
   remotes:
+      # ZMK Official
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
+      # bravekarma
+    - name: caksoylar
+      url-base: https://github.com/caksoylar
+      # miketronic
+    - name: miketronic
+      url-base: https://github.com/miketronic
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
+    - name: caksoylar
+      remote: caksoylar
+      revision: caksoylar/experimental
+      import: app/west.yml
+    - name: zmk-keyboards-desolation
+      remote: miketronic
+      revision: main
   self:
     path: config
