@@ -11,10 +11,6 @@ manifest:
       url-base: https://github.com/miketronic
   projects:
     - name: zmk
-      remote: zmkfirmware
-      revision: main
-      import: app/west.yml
-    - name: caksoylar
       remote: caksoylar
       revision: caksoylar/experimental
       import: app/west.yml
