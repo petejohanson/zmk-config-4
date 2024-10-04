@@ -242,19 +242,20 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+
 // ---------------------------------------------------------------------------------------------------------------
 // |   TAB   |    W   [Q]   F   [B]   G num|         |    X    |         |    M   [J]   L    |    U    |  BSPC   |
 // |  SHIFT  | A macro[V]   R   [P]   S sym|         |    X    |         |    N   [K]   E   [!]   I    |  DEL    |
 // |  XXXX   |  C  fn [Z]   D   [X]   T    |         |    X    |         | H mouse |  O tt,  |  Y  tt. |  XXXX   |
 //                     |   CCCV  |SPC/SHFT | RETURN  |    X    |   SPC   | SPC/ENT |   Paste |
 // ---------------------------------------------------------------------------------------------------------------
+        default_layer {
             display-name = "-DESO-";            
-            bindings = <
+            bindings = <LAYER_FROM38( \
                 &none &none     &tdW           &kp F              &lt NUM G          &kp M          &kp L    &kp U        &none &none
                 &none &none     &lt MACRO A    &kp R              &lt SYM S          &kp N          &kp E    &kp I        &none &none
                 &none &none     &lt FN C       &hrm LCTRL D       &hrm LALT T        &lt MOUSE H    &tdO     &tdY         &none &none
-             &none   &kp R &cccv LC(C) LC(V) &mt LSHIFT SPC &mt LSHIFT SPC         &mt RSHIFT RET &mt RSHIFT RET  &kp DEL      &kp A &none
+                &none &kp R     &cccv LC(C) LC(V) &mt LSHIFT SPC &mt LSHIFT SPC         &mt RSHIFT RET &mt RSHIFT RET  &kp DEL      &kp A &none
             >;
         };
 
