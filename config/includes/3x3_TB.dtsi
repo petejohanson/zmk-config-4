@@ -252,9 +252,9 @@
         default_layer {
             display-name = "-DESO-";            
             bindings = <LAYER_FROM38( \
-                &none, &none, &tdW, &kp F, &lt NUM G, &kp M, &kp L, &kp U, &none, &none \
-                &none, &none, &lt MAC A, &kp R, &lt SYM S, &kp N, &kp E, &kp I, &none, &none \
-                &none, &none, &lt FUN C, &hrm LCTRL D, &hrm LALT T, &lt MSE H, &tdO, &tdY, &none, &none \
+                &none, &none, &tdW, &kp F, &lt NUM G, &kp M, &kp L, &kp U, &none, &none, \
+                &none, &none, &lt MAC A, &kp R, &lt SYM S, &kp N, &kp E, &kp I, &none, &none, \
+                &none, &none, &lt FUN C, &hrm LCTRL D, &hrm LALT T, &lt MSE H, &tdO, &tdY, &none, &none, \
                 &kp R, &cccv LC(C) LC(V), &mt LSHIFT SPC, &mt LSHIFT SPC, &mt RSHIFT RET, &mt RSHIFT RET,  &kp DEL, &kp A \
             )>;
         };
@@ -262,9 +262,9 @@
         SYM_layer {
             display-name = "SYMBOL";
             bindings = <LAYER_FROM38( \
-                &none, &none, &grvtld, &kp STAR, &none, &par, &bkt, &thn, &none, &none \
-                &none, &none, &none, &kp PLUS, &none, &cln, &sls, &pipe, &none, &none \
-                &none, &none, &none, &none, &none, &qot, &at, &perc, &none, &none \
+                &none, &none, &grvtld, &kp STAR, &none, &par, &bkt, &thn, &none, &none, \
+                &none, &none, &none, &kp PLUS, &none, &cln, &sls, &pipe, &none, &none, \
+                &none, &none, &none, &none, &none, &qot, &at, &perc, &none, &none, \
                 &trans, &trans, &trans, &none, &none, &trans, &trans,  &trans \
             )>;
         };
@@ -272,9 +272,9 @@
         NUM_layer {
             display-name = "NUMBER";
             bindings = <LAYER_FROM38( \
-                &none, &none, &kp TAB, &kp STAR, &none, &kp N7, &kp N8, &kp N9, &none, &none \
-                &none, &none, &none, &none, &none, &kp N4, &kp N5, &kp N6, &none, &none \
-                &none, &none, &bootloader, &none, &none, &kp N1, &td20, &kp N3, &none, &none \
+                &none, &none, &kp TAB, &kp STAR, &none, &kp N7, &kp N8, &kp N9, &none, &none, \
+                &none, &none, &none, &none, &none, &kp N4, &kp N5, &kp N6, &none, &none, \
+                &none, &none, &bootloader, &none, &none, &kp N1, &td20, &kp N3, &none, &none, \
                        &trans, &trans, &trans, &none, &none, &trans, &trans, &trans \
             )>;
         };
@@ -282,9 +282,9 @@
         MOUSE_layer {
             display-name = "MOUSE";
             bindings = <LAYER_FROM38( \
-                &none, &none, &msc SCRL_UP, &mmv MOVE_UP, &msc SCRL_DOWN, &kp MINUS, &kp UNDER, &kp BSPC, &none, &none \
-                &none, &none, &mmv MOVE_LEFT, &mmv MOVE_DOWN, &mmv MOVE_RIGHT, &none, &none, &none, &none, &none \
-                &none, &none, &mkp MCLK, &mkp RCLK, &mkp LCLK, &none, &none, &cccv LC(C) LC(V), &none, &none \
+                &none, &none, &msc SCRL_UP, &mmv MOVE_UP, &msc SCRL_DOWN, &kp MINUS, &kp UNDER, &kp BSPC, &none, &none, \
+                &none, &none, &mmv MOVE_LEFT, &mmv MOVE_DOWN, &mmv MOVE_RIGHT, &none, &none, &none, &none, &none, \
+                &none, &none, &mkp MCLK, &mkp RCLK, &mkp LCLK, &none, &none, &cccv LC(C) LC(V), &none, &none, \
                       &none, &mkp MCLK, &mkp RCLK, &mkp LCLK, &trans, &trans, &trans, &none \
             )>;
         };
@@ -292,9 +292,9 @@
         MACRO_layer {
             display-name = "MACRO";
             bindings = <LAYER_FROM38( \
-                &none, &none, &none, &none, &none, &none, &none, &none, &none, &none \
-                &none, &none, &trans, &lines, &square, &none, &none, &none, &none, &none \
-                &none, &none, &none, &date, &time, &th, &re, &yw, &none, &none \
+                &none, &none, &none, &none, &none, &none, &none, &none, &none, &none, \
+                &none, &none, &trans, &lines, &square, &none, &none, &none, &none, &none, \
+                &none, &none, &none, &date, &time, &th, &re, &yw, &none, &none, \
                       &trans, &trans, &trans, &none, &none, &trans, &trans, &trans \
             )>;
         };
@@ -302,9 +302,9 @@
         FN_layer {
             display-name = "FUNCTION";    
             bindings = <LAYER_FROM38( \
-                &none, &none, &cccv LC(C) LC(V), &kp LC(LA(Q)), &kp LC(LA(G)), &kp F2, &kp UP, &kp DEL, &none, &none \
-                &none, &none, &kp TAB, &none, &pg, &kp LEFT, &kp DOWN, &kp RIGHT, &none, &none \
-                &none, &none, &trans, &kp LC(BSPC), &hmend, &kp LC(Z), &kp DEL, &kp LC(Y), &none, &none \
+                &none, &none, &cccv LC(C) LC(V), &kp LC(LA(Q)), &kp LC(LA(G)), &kp F2, &kp UP, &kp DEL, &none, &none, \
+                &none, &none, &kp TAB, &none, &pg, &kp LEFT, &kp DOWN, &kp RIGHT, &none, &none, \
+                &none, &none, &trans, &kp LC(BSPC), &hmend, &kp LC(Z), &kp DEL, &kp LC(Y), &none, &none, \
                       &trans, &trans, &trans, &none, &none, &trans, &trans, &trans \
             )>;
         };
