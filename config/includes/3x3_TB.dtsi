@@ -255,17 +255,17 @@
                 &none, &none, &tdW, &kp F, &lt NUM G, &kp M, &kp L, &kp U, &none, &none \
                 &none, &none, &lt MAC A, &kp R, &lt SYM S, &kp N, &kp E, &kp I, &none, &none \
                 &none, &none, &lt FUN C, &hrm LCTRL D, &hrm LALT T, &lt MSE H, &tdO, &tdY, &none, &none \
-                &none, &kp R, &cccv LC(C) LC(V), &mt LSHIFT SPC, &mt LSHIFT SPC, &mt RSHIFT RET, &mt RSHIFT RET,  &kp DEL, &kp A &none \
+                &none, &kp R, &cccv LC(C) LC(V), &mt LSHIFT SPC, &mt LSHIFT SPC, &mt RSHIFT RET, &mt RSHIFT RET,  &kp DEL, &kp A, &none \
             )>;
         };
 
         SYM_layer {
             display-name = "SYMBOL";
             bindings = <LAYER_FROM38( \
-                &none &none       &grvtld   &kp STAR    &none                  &par   &bkt   &thn         &none &none
-                &none &none       &none     &kp PLUS    &none                  &cln   &sls   &pipe        &none &none
-                &none &none       &none     &none       &none                  &qot   &at    &perc        &none &none
-                                   &trans  &trans  &trans  &none       &none  &trans &trans  &trans
+                &none, &none, &grvtld, &kp STAR, &none, &par, &bkt, &thn, &none, &none \
+                &none, &none, &none, &kp PLUS, &none, &cln, &sls, &pipe, &none, &none \
+                &none, &none, &none, &none, &none, &qot, &at, &perc, &none, &none \
+                                   &trans, &trans, &trans, &none, &none, &trans, &trans,  &trans \
             )>;
         };
 
