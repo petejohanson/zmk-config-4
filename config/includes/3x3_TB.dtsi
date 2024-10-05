@@ -292,20 +292,20 @@
         MACRO_layer {
             display-name = "MACRO";
             bindings = <LAYER_FROM38( \
-                &none &none       &none   &none   &none           &none &none  &none         &none &none
-                &none &none       &trans  &lines  &square         &none &none  &none         &none &none
-                &none &none       &none   &date   &time           &th   &re    &yw           &none &none
-                      &trans      &trans  &trans  &none           &none &trans &trans        &trans
+                &none, &none, &none, &none, &none, &none, &none, &none, &none, &none \
+                &none, &none, &trans, &lines, &square, &none, &none, &none, &none, &none \
+                &none, &none, &none, &date, &time, &th, &re, &yw, &none, &none \
+                      &trans, &trans, &trans, &none, &none, &trans, &trans, &trans \
             )>;
         };
 
         FN_layer {
             display-name = "FUNCTION";    
             bindings = <LAYER_FROM38( \
-                &none &none   &cccv LC(C) LC(V)  &kp LC(LA(Q))   &kp LC(LA(G))    &kp F2       &kp UP      &kp DEL    &none &none
-                &none &none   &kp TAB            &none           &pg              &kp LEFT     &kp DOWN    &kp RIGHT  &none &none
-                &none &none   &trans             &kp LC(BSPC)    &hmend           &kp LC(Z)    &kp DEL     &kp LC(Y)  &none &none
-                      &trans  &trans             &trans          &none            &none        &trans      &trans     &trans
+                &none, &none, &cccv LC(C) LC(V), &kp LC(LA(Q)), &kp LC(LA(G)), &kp F2, &kp UP, &kp DEL, &none, &none \
+                &none, &none, &kp TAB, &none, &pg, &kp LEFT, &kp DOWN, &kp RIGHT, &none, &none \
+                &none, &none, &trans, &kp LC(BSPC), &hmend, &kp LC(Z), &kp DEL, &kp LC(Y), &none, &none \
+                      &trans, &trans, &trans, &none, &none, &trans, &trans, &trans \
             )>;
         };
     };
