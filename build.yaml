@@ -14,10 +14,10 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: desolation nice_view_adapter nice_view
+    shield: desolation
     artifact-name: desolation_keymap
   - board: nice_nano_v2
-    shield: desolation nice_view_adapter nice_view
+    shield: desolation
     cmake-args: -DKEYMAP_FILE=../../config/desolation_WFG_3COL.keymap
     artifact-name: desolation_wfg_3COL_keymap
   - board: nice_nano_v2
