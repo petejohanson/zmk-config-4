@@ -8,10 +8,10 @@ manifest:
       url-base: https://github.com/miketronic
   projects:
     - name: zmk
-     # remote: caksoylar
-     # revision: caksoylar/experimental
-      remote: zmkfirmware
-      revision: main
+      remote: caksoylar
+      revision: caksoylar/experimental
+      # remote: zmkfirmware
+      # revision: main
       import: app/west.yml
     - name: zmk-keyboards-desolation
       remote: miketronic
