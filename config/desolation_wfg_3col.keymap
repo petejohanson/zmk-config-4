@@ -1,3 +1,3 @@
 #define MOUSE_KEYS
-#include "layouts/5to3_4thumb.h"
+#include "keypos_def/5to3_4thumb.h"
 #include "includes/3x3_TB.dtsi"
