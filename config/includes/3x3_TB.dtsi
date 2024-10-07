@@ -287,6 +287,7 @@
             )>;
         };
 
+/*
         MOUSE_layer {
             display-name = "MOUSE";
             bindings = <LAYER_FROM38( \
@@ -294,6 +295,17 @@
                 &none, &none, &mmv MOVE_LEFT, &mmv MOVE_DOWN, &mmv MOVE_RIGHT, &none, &none, &none, &none, &none, \
                 &none, &none, &mkp MCLK, &mkp RCLK, &mkp LCLK, &none, &none, &cccv, &none, &none, \
                       &none, &mkp MCLK, &mkp RCLK, &mkp LCLK, &trans, &trans, &trans, &none \
+            )>;
+        };
+*/
+
+        MOUSE_layer {
+            display-name = "MOUSE";
+            bindings = <LAYER_FROM38( \
+                &none, &none, &none, &none, &none, &kp MINUS, &kp UNDER, &kp BSPC, &none, &none, \
+                &none, &none, &none, &none, &none, &none, &none, &none, &none, &none, \
+                &none, &none, &none, &none, &none, &none, &none, &cccv, &none, &none, \
+                       &none, &none, &none, &none, &trans, &trans, &trans, &none \
             )>;
         };
 
