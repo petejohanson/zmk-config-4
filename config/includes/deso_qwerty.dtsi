@@ -120,7 +120,7 @@
                 &kp N1, &kp N2, &kp N3, &kp N4, &kp N5, &kp N6, &kp N7, &kp N8, &kp N9, &kp N0, \
                 &none, &none, &none, &none, &none, &none, &none, &none, &trans, &none, \
                 &trans, &trans, &trans, &trans, &trans, &trans, &trans, &trans \
-            >;
+            )>;
         };
 
         mse_layer {
@@ -130,7 +130,7 @@
                 &kp END, &mmv MOVE_LEFT, &mmv MOVE_DOWN, &mmv MOVE_RIGHT, &none, &none, &kp UNDER, &none, &none, &none, \
                 &kp PG_DN, &mkp LCLK, &mkp MCLK, &mkp RCLK, &none, &none, &none, &none, &none, &none, \    
                 &mkp LCLK, &mkp MCLK, &mkp RCLK, &none, &none, &trans, &trans, &trans \
-            >;
+            )>;
         };
 
     };
