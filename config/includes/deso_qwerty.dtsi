@@ -14,10 +14,10 @@
 #include "mouse.dtsi"
 #    define MS_ACT(key) &lt MSE key
 
-#define ALPHA       0
-#define SYMBOL      1
-#define NUMBER      2
-#define MOUSE       3
+#define DEF      0
+#define SYM      1
+#define NUM      2
+#define MSE      3
 
 &mt {
     flavor = "tap-preferred";
@@ -93,43 +93,43 @@
     keymap {
         compatible = "zmk,keymap";
 
-        ALPHA_layer {
+        default_layer {
             display-name = "-DESO-";  
-            bindings = <
-                &qesc   &lt NUMBER W          &kp E        &kp R       &kp T        &kp Y     &kp U          &kp I     &kp O    &kp P
-                &kp A   &kp S          &kp D        &kp F       &kp G        &kp H     &kp J          &kp K     &kp L    &kp SQT
-                &lt SYMBOL Z   &hrm LGUI X    &hrm LALT C  &kp V       &kp B        &kp N     &lt MOUSE M    &kp COMMA &kp DOT  &kp SLASH
-                        &kp TAB        &kp TAB    &kp SPACE   &kp SPACE    &kp RET   &kp RET        &kp DEL   &kp BSPC
-            >;
+            bindings = <LAYER_FROM38( \
+                &qesc, &lt NUM W, &kp E, &kp R, &kp T, &kp Y, &kp U, &kp I, &kp O, &kp P, \
+                &kp A, &kp S, &kp D, &kp F, &kp G, &kp H, &kp J, &kp K, &kp L, &kp SQT,   \
+                &lt SYM Z, &hrm LGUI X, &hrm LALT C, &kp V, &kp B, &kp N, &lt MSE M, &kp COMMA, &kp DOT, &kp SLASH, \
+                &kp TAB, &kp TAB, &kp SPACE, &kp SPACE, &kp RET, &kp RET, &kp DEL, &kp BSPC \
+            )>;
         };
 
-        SYMBOL_layer {
+        sym_layer {
             display-name = "SYMBOL";  
-            bindings = <
-                &kp EXCL    &kp AT      &kp HASH    &kp DLLR    &kp PRCNT   &kp CARET   &kp AMPS    &kp STAR    &kp PIPE    &none
-                &kp GRAVE   &kp TILDE   &kp UNDER   &kp EQUAL   &none       &bkt        &brc        &par        &thn        &kp BSLH
-                &none       &none       &kp PLUS    &kp MINUS   &none       &none       &none       &kp COLON   &trans      &kp SEMI
-                                  &trans  &trans    &trans      &trans      &trans      &trans      &trans      &trans
-            >;
+            bindings = <LAYER_FROM38( \
+                &kp EXCL, &kp AT, &kp HASH, &kp DLLR, &kp PRCNT, &kp CARET, &kp AMPS, &kp STAR, &kp PIPE, &none, \
+                &kp GRAVE, &kp TILDE, &kp UNDER, &kp EQUAL, &none, &bkt, &brc, &par, &thn, &kp BSLH, \
+                &none, &none, &kp PLUS, &kp MINUS, &none, &none, &none, &kp COLON, &trans, &kp SEMI, \
+                &trans, &trans, &trans, &trans, &trans, &trans, &trans, &trans \
+            )>;
         };
 
-        NUMBER_layer {
+        num_layer {
             display-name = "NUMBER";  
-            bindings = <
-                &none       &none       &none       &none       &none       &none       &none       &none       &none       &none
-                &kp N1      &kp N2      &kp N3      &kp N4      &kp N5      &kp N6      &kp N7      &kp N8      &kp N9      &kp N0
-                &none       &none       &none       &none       &none       &none       &none       &none       &trans      &none
-                            &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans
+            bindings = <LAYER_FROM38( \
+                &none, &none, &none, &none, &none, &none, &none, &none, &none, &none, \
+                &kp N1, &kp N2, &kp N3, &kp N4, &kp N5, &kp N6, &kp N7, &kp N8, &kp N9, &kp N0, \
+                &none, &none, &none, &none, &none, &none, &none, &none, &trans, &none, \
+                &trans, &trans, &trans, &trans, &trans, &trans, &trans, &trans \
             >;
         };
 
-        MOUSE_layer {
+        mse_layer {
             display-name = "MOUSE";  
-            bindings = <
-                &kp PG_UP  &msc SCRL_UP      &mmv MOVE_UP      &msc SCRL_DOWN    &none    &none       &kp MINUS   &none    &none     &kp BSPC 
-                &kp END    &mmv MOVE_LEFT    &mmv MOVE_DOWN    &mmv MOVE_RIGHT   &none    &none       &kp UNDER   &none    &none     &none
-                &kp PG_DN  &mkp LCLK         &mkp MCLK         &mkp RCLK         &none    &none       &none       &none    &none     &none    
-                           &mkp LCLK         &mkp MCLK         &mkp RCLK         &none    &none       &trans      &trans   &trans
+            bindings = <LAYER_FROM38( \
+                &kp PG_UP, &msc SCRL_UP, &mmv MOVE_UP, &msc SCRL_DOWN, &none, &none, &kp MINUS, &none, &none, &kp BSPC, \ 
+                &kp END, &mmv MOVE_LEFT, &mmv MOVE_DOWN, &mmv MOVE_RIGHT, &none, &none, &kp UNDER, &none, &none, &none, \
+                &kp PG_DN, &mkp LCLK, &mkp MCLK, &mkp RCLK, &none, &none, &none, &none, &none, &none, \    
+                &mkp LCLK, &mkp MCLK, &mkp RCLK, &none, &none, &trans, &trans, &trans \
             >;
         };
 
