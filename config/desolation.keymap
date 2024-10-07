@@ -5,5 +5,5 @@
  */
 
 #define MOUSE_KEYS
-#include "keypos_def/19x2_13x2.h"
-#include "includes/13x2.dtsi"
+#include "keypos_def/19x2.h"
+#include "includes/deso_qwerty.dtsi"
