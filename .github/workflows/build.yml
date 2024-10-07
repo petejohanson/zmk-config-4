@@ -1,14 +1,4 @@
-name: Build ZMK firmware
-on:
-  workflow_dispatch:
-  push:
-    paths:
-      - config/west.yml
-      - config/*.keymap
-      - config/*.conf
-      - config/includes/*.dtsi
-      - boards/**
-      - build.yaml
+on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
