@@ -15,7 +15,6 @@
 include:
   - board: nice_nano_v2
     shield: desolation
-    cmake-args: -DKEYMAP_FILE=../../config/desolation.keymap
     artifact-name: desolation_keymap
   - board: nice_nano_v2
     shield: desolation
