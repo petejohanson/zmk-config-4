@@ -17,7 +17,8 @@
 #define DEF      0
 #define SYM      1
 #define NUM      2
-#define MSE      3
+/* #define MSE      3 
+*/
 
 &mt {
     flavor = "tap-preferred";
@@ -98,7 +99,7 @@
             bindings = <LAYER_FROM38( \
                 &qesc, &lt NUM W, &kp E, &kp R, &kp T, &kp Y, &kp U, &kp I, &kp O, &kp P, \
                 &kp A, &kp S, &kp D, &kp F, &kp G, &kp H, &kp J, &kp K, &kp L, &kp SQT,   \
-                &lt SYM Z, &hrm LGUI X, &hrm LALT C, &kp V, &kp B, &kp N, &lt MSE M, &kp COMMA, &kp DOT, &kp SLASH, \
+                &lt SYM Z, &hrm LGUI X, &hrm LALT C, &kp V, &kp B, &kp N, &kp M, &kp COMMA, &kp DOT, &kp SLASH, \
                 &kp TAB, &kp TAB, &kp SPACE, &kp SPACE, &kp RET, &kp RET, &kp DEL, &kp BSPC \
             )>;
         };
@@ -123,6 +124,7 @@
             )>;
         };
 
+/*
         mse_layer {
             display-name = "MOUSE";  
             bindings = <LAYER_FROM38( \
@@ -132,6 +134,7 @@
                 &mkp LCLK, &mkp MCLK, &mkp RCLK, &none, &none, &trans, &trans, &trans \
             )>;
         };
+*/
 
     };
 };
