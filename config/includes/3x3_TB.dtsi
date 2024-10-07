@@ -31,8 +31,8 @@
 // #define TAB_RT LC(TAB)
 // #define TAB_LT LC(LS(TAB))
 // #define &cccv LC(C) LC(V)
-#define LCC LC(C)
-#define LCV LC(V)
+#define LCC K_COPY
+#define LCV K_PASTE
 
 &mt {
     flavor = "hold-preferred";
@@ -176,7 +176,7 @@
            #binding-cells = <2>;
            flavor = "hold-preferred";
            tapping-term-ms = <200>;
-           bindings = <%kp>, <&kp>;
+           bindings = <&kp K_COPY>, <&kp K_PASTE>;
         };
 
         hrm: homerow_mods {
