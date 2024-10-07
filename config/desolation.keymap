@@ -1,3 +1,9 @@
+/*
+* #define MOUSE_KEYS
+* #include "layouts/19x2.h"
+* #include "includes/deso_qwerty.dtsi"
+*/
+
 #define MOUSE_KEYS
-#include "layouts/19x2.h"
-#include "includes/deso_qwerty.dtsi"
+#include "layouts/5to3_4thumb.h"
+#include "includes/3x3_TB.dtsi"
