@@ -46,6 +46,8 @@ MACRO(square, ahk_square,  0,    &macro_tap &kp FSLH &kp FSLH &kp A &kp N0 &kp N
 };
 
 */
+
+/ {
    macros {
         th: ahk_th {
             compatible = "zmk,behavior-macro";
@@ -103,3 +105,5 @@ MACRO(square, ahk_square,  0,    &macro_tap &kp FSLH &kp FSLH &kp A &kp N0 &kp N
                 ;
         };
     };
+
+};
