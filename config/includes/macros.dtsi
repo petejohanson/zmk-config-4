@@ -1,0 +1,49 @@
+/*
+https://zmk.dev/docs/keymaps/behaviors/macros
+
+KEY POSITIONS (using keypos_def helpers)
+╭─────────────────────┬─────────────────────╮
+│ LT0 LT1 LT2 LT3 LT4 │ RT0 RT1 RT2 RT3 RT4 │
+│ LM0 LM1 LM2 LM3 LM4 │ RM0 RM1 RM2 RM3 RM4 │
+│ LB0 LB1 LB2 LB3 LB4 │ RB0 RB1 RB2 RB3 RB4 │
+│ LH0 LH1 LH2 LH3 LH4 │ RH0 RH1 RH2 RH3 RH4 │
+╰─────────────────────┴─────────────────────╯    
+
+/ {
+    macros {
+        zed_em_kay: zed_em_kay {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp Z &kp M &kp K>
+                , <&macro_release &kp LSHFT>
+                ;
+        };
+    };
+};
+
+*/
+
+#define MACRO(LABEL, NAME, BINDINGCELL, BINDINGS) \
+    ##LABEL: ##NAME { \
+        #binding-cells = <BINDINGCELL>; \
+        bindings \
+            = <BINDINGS> \
+          ; \
+    };
+          
+/ {
+    macros {
+        compatible = "zmk,behavior-macro";
+
+MACRO(th,     ahk_th,      0,    &macro_tap &kp FSLH &kp FSLH &kp T &kp H)
+MACRO(re,     ahk_yw,      0,    &macro_tap &kp FSLH &kp FSLH &kp R &kp E)
+MACRO(yw,     ahk_th,      0,    &macro_tap &kp FSLH &kp FSLH &kp Y &kp W)
+MACRO(date,   ahk_date,    0,    &macro_tap &kp FSLH &kp FSLH &kp A &kp N1 &kp N1)
+MACRO(time,   ahk_time,    0,    &macro_tap &kp FSLH &kp FSLH &kp A &kp N1 &kp N2)
+MACRO(lines,  ahk_lines,   0,    &macro_tap &kp FSLH &kp FSLH &kp A &kp N0 &kp N8)
+MACRO(square, ahk_square,  0,    &macro_tap &kp FSLH &kp FSLH &kp A &kp N0 &kp N9)
+  
+    };
+};
