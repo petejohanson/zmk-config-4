@@ -17,7 +17,7 @@
 #define DEF 0
 #define SYM 1
 #define NUM 2
-/* #define MSE 3 */
+// #define MSE 3
 #define MAC 4
 #define FUN 5
 
