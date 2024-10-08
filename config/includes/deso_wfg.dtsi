@@ -10,6 +10,7 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/mouse.h>
 #include "combos.dtsi"
+#include "macros.dtsi"
 #include "mouse.dtsi"
 #    define MS_ACT(key) &lt MSE key
 
@@ -176,63 +177,6 @@
         };
     };
 
-    macros {
-        th: ahk_th {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp FSLH &kp FSLH &kp T &kp H>
-                ;
-        };
-
-        re: ahk_re {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp FSLH &kp FSLH &kp R &kp E>
-                ;
-        };
-
-        yw: ahk_yw {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp FSLH &kp FSLH &kp Y &kp W>
-                ;
-        };
-
-        date: ahk_date {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp FSLH &kp FSLH &kp A &kp N1 &kp N1>
-                ;
-        };
-
-        time: ahk_time {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp FSLH &kp FSLH &kp A &kp N1 &kp N2>
-                ;
-        };
-
-        lines: ahk_lines {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp FSLH &kp FSLH &kp A &kp N0 &kp N8>
-                ;
-        };
-
-        square: ahk_square {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp FSLH &kp FSLH &kp A &kp N0 &kp N9>
-                ;
-        };
-    };
 
     keymap {
         compatible = "zmk,keymap";
