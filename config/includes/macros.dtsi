@@ -26,11 +26,10 @@ KEY POSITIONS (using keypos_def helpers)
 */
 
 #define MACRO(LABEL, NAME, BINDINGCELL, BINDINGS) \
-    LABEL: NAME { \
+    ##LABEL: ##NAME { \
         #binding-cells = <BINDINGCELL>; \
         bindings \
-            = <BINDINGS> \
-          ; \
+            = <BINDINGS>; \
     };
           
 / {
