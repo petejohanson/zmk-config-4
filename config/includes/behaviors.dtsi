@@ -159,6 +159,6 @@ KEY POSITIONS (using keypos_def helpers)
             bindings = <&kp>, <&kp>;
         };
     };
-
+};
 
   
