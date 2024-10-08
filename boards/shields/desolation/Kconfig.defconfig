@@ -1,6 +1,0 @@
-if SHIELD_DESOLATION
-
-config ZMK_KEYBOARD_NAME
-    default "Desolation"
-
-endif
