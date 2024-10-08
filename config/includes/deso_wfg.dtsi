@@ -18,7 +18,7 @@
 #define DEF 0
 #define SYM 1
 #define NUM 2
-// #define MSE 3
+#define MSE 3
 #define MAC 4
 #define FUN 5
 
@@ -193,7 +193,7 @@
             bindings = <LAYER_FROM38( \
                 &none, &none, &tdW, &kp F, &lt NUM G, &kp M, &kp L, &kp U, &none, &none, \
                 &none, &none, &lt MAC A, &kp R, &lt SYM S, &kp N, &kp E, &kp I, &none, &none, \
-                &none, &none, &lt FUN C, &hrm LCTRL D, &hrm LALT T, &kp H, &tdO, &tdY, &none, &none, \
+                &none, &none, &lt FUN C, &hrm LCTRL D, &hrm LALT T, &lt MSE H, &tdO, &tdY, &none, &none, \
                 &kp R, CPST, &mt LSHIFT SPC, &mt LSHIFT SPC, &mt RSHIFT RET, &mt RSHIFT RET,  &kp DEL, &kp A \
             )>;
         };
@@ -218,8 +218,6 @@
             )>;
         };
 
-
-/*
         MOUSE_layer {
             display-name = "MOUSE";
             bindings = <LAYER_FROM38( \
@@ -229,7 +227,6 @@
                       &none, &mkp MCLK, &mkp RCLK, &mkp LCLK, &trans, &trans, &trans, &none \
             )>;
         };
-*/
 
         MACRO_layer {
             display-name = "MACRO";
