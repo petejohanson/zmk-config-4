@@ -38,8 +38,8 @@ KEY POSITIONS (using keypos_def helpers)
         compatible = "zmk,behavior-macro";
 
 MACRO(th,     ahk_th,      0,    &macro_tap &kp FSLH &kp FSLH &kp T &kp H)
-MACRO(re,     ahk_yw,      0,    &macro_tap &kp FSLH &kp FSLH &kp R &kp E)
-MACRO(yw,     ahk_th,      0,    &macro_tap &kp FSLH &kp FSLH &kp Y &kp W)
+MACRO(re,     ahk_re,      0,    &macro_tap &kp FSLH &kp FSLH &kp R &kp E)
+MACRO(yw,     ahk_yw,      0,    &macro_tap &kp FSLH &kp FSLH &kp Y &kp W)
 MACRO(date,   ahk_date,    0,    &macro_tap &kp FSLH &kp FSLH &kp A &kp N1 &kp N1)
 MACRO(time,   ahk_time,    0,    &macro_tap &kp FSLH &kp FSLH &kp A &kp N1 &kp N2)
 MACRO(lines,  ahk_lines,   0,    &macro_tap &kp FSLH &kp FSLH &kp A &kp N0 &kp N8)
