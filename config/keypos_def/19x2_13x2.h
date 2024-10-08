@@ -89,9 +89,9 @@
 #define RH2 37
 #define RH3 38
 
-#define KEYS_L LT2 LT3 LT4 LM2 LM3 LM4 LB2 LB3 LB4     // left-hand keys
-#define KEYS_R RT0 RT1 RT2 RM0 RM1 RM2 RB0 RB1 RB2     // right-hand keys
-#define THUMBS LH0 LH1 LH2 LH3 RH0 RH1 RH2 RH3         // thumb keys
+#define KEYS_L LT2 LT3 LT4   LM2 LM3 LM4   LB2 LB3 LB4       // left-hand keys
+#define KEYS_R RT0 RT1 RT2   RM0 RM1 RM2   RB0 RB1 RB2       // right-hand keys
+#define THUMBS     LH0 LH1 LH2 LH3   RH0 RH1 RH2 RH3         // thumb keys
 
 #define LAYER_FROM38( \
     k00, k01, k02, k03, k04,                                    k05, k06, k07, k08, k09, \
