@@ -60,12 +60,13 @@
         default_layer {
             display-name = "-DESO-";            
             bindings = <LAYER_FROM38( \
-                &none, &none, &kp A, &kp B,  &kp C,  &kp D,  &kp E,  &kp F, &none, &none, \
-                &none, &none, &kp G, &kp H,  &kp I,  &kp J,  &kp K,  &kp L, &none, &none, \
-                &none, &none, &kp M, &kp N,  &kp O,  &kp P,  &kp Q,  &kp R, &none, &none, \
+                &none, &none, &tdW, &kp F, &lt NUM G, &kp M, &kp L, &kp U, &none, &none, \
+                &none, &none, &lt MAC A, &kp R, &lt SYM S, &kp N, &kp E, &kp I, &none, &none, \
+                &none, &none, &lt FUN C, &hrm LCTRL D, &hrm LALT T, &lt MSE H, &tdO, &tdY, &none, &none, \
                 &kp R, CPST,  SFTSPC, SFTSPC, SFTENT, SFTENT,  &kp DEL, &kp A \
             )>;
         };
+
 
         SYM_layer {
             display-name = "SYMBOL";
