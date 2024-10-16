@@ -60,9 +60,9 @@
         default_layer {
             display-name = "-DESO-";            
             bindings = <LAYER_FROM38( \
-                &none, &none, &tdW, &kp F, &lt NUM G, &kp M, &kp L, &kp U, &none, &none, \
-                &none, &none, &lt MAC A, &kp R, &lt SYM S, &kp N, &kp E, &kp I, &none, &none, \
-                &none, &none, &lt FUN C, &hrm LCTRL D, &hrm LALT T, &lt MSE H, &tdO, &tdY, &none, &none, \
+                &none, &none, &kp F, &kp F,  &kp F,  &kp F,  &kp F,  &kp F, &none, &none, \
+                &none, &none, &kp F, &kp F,  &kp F,  &kp F,  &kp F,  &kp F, &none, &none, \
+                &none, &none, &kp F, &kp F,  &kp F,  &kp F,  &kp F,  &kp F, &none, &none, \
                 &kp R, CPST,  SFTSPC, SFTSPC, SFTENT, SFTENT,  &kp DEL, &kp A \
             )>;
         };
