@@ -26,14 +26,14 @@
 
 COMBO(q,      &kp Q,       LT1 LT2, 50)
 COMBO(b,      &kp B,       LT2 LT3, 50)
-COMBO(j,      &kp J,       LT3 LT4, 50)
-COMBO(bspc,   &kp BSPC,    LT4 RT0, 50)
+COMBO(j,      &kp J,       LT4 RT0, 50)
+COMBO(bspc,   &kp BSPC,    RT0 RT1, 50)
 COMBO(v,      &kp V,       LM1 LM2, 50)
 COMBO(p,      &kp P,       LM2 LM3, 50)
-COMBO(k,      &kp K,       LM3 LM4, 50)
-COMBO(excl,   &kp EXCL,    LM4 RM0, 50)
+COMBO(k,      &kp K,       LM4 RM0, 50)
+COMBO(excl,   &kp EXCL,    RM0 RM1, 50)
 COMBO(z,      &kp Z,       LB1 LB2, 50)
 COMBO(x,      &kp X,       LB2 LB3, 50)
-COMBO(qmark,  &kp QMARK,   LB4 RB0, 50)
+COMBO(qmark,  &kp QMARK,   RB0 RB1, 50)
     };
 };
