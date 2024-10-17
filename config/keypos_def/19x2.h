@@ -72,11 +72,11 @@
 #define LB3 24
 #define LB4 25
 
-#define RB1 26  // right-bottom row
-#define RB2 27
-#define RB3 28
-#define RB4 29
-#define RB5 30
+#define RB0 26  // right-bottom row
+#define RB1 27
+#define RB2 28
+#define RB3 29
+#define RB4 30
 
 #define LH0 31  // left thumb key
 #define LH1 32 
