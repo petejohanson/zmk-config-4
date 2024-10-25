@@ -7,9 +7,12 @@ manifest:
     - name: miketronic
       url-base: https://github.com/miketronic
   projects:
+  #  - name: zmk
+  #    remote: caksoylar
+  #    revision: caksoylar/experimental
     - name: zmk
-      remote: caksoylar
-      revision: caksoylar/experimental
+      remote: miketronic
+      revision: Add-Waveshare-RP2040-Zero
       # remote: zmkfirmware
       # revision: main
       import: app/west.yml
