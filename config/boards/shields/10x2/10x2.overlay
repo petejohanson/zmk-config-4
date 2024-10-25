@@ -4,52 +4,16 @@
  */
 
 #include <dt-bindings/zmk/matrix_transform.h>
-#include <dt-bindings/led/led.h>
 
-
-&pinctrl {
-	uart1_default: uart0_default {
-		group1 {
-			pinmux = <UART1_TX_P20>;
-		};
-		group2 {
-			pinmux = <UART1_RX_P5>;
-			input-enable;
-		};
-	};
-
-	i2c1_default: i2c1_default {
-		group1 {
-			pinmux = <I2C1_SDA_P22>, <I2C1_SCL_P23>;
-			input-enable;
-			input-schmitt-enable;
-		};
-	};
-
-
-	spi0_default: spi0_default {
-		group1 {
-			pinmux = <SPI0_TX_P3>;
-		};
-	};
-};
-
-&spi0 {
-	status = "okay";
-	pinctrl-0 = <&spi0_default>;
-	pinctrl-names = "default";
-	clock-frequency = <DT_FREQ_M(2)>;
-};
 
 / {
 	chosen {
 		zmk,kscan = &kscan0;
-		zmk,underglow = &led_strip;
 	};
 
 	kscan0: kscan {
-		compatible = "zmk,kscan-gpio-direct";
-		wakeup-source;
+		compatible = "zmk,kscan-gpio-direct", "waveshare_rp2040_zero";
+		label = "KSCAN";
     input-gpios
       = <&gpio0 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
       , <&gpio0 1 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
@@ -71,26 +35,8 @@
       , <&gpio0 27 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
       , <&gpio0 28 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
       ;
+
 	};
 
 };
 
-&spi0 {
-
-  led_strip: ws2812@0 {
-    compatible = "worldsemi,ws2812-spi";
-    label = "WS2812";
-
-    /* SPI */
-    reg = <0>;
-    spi-max-frequency = <5250000>;
-
-    /* WS2812 */
-    chain-length = <1>; /* number of LEDs */
-    spi-one-frame = <0x70>; /* make sure to configure this properly for your SOC */
-    spi-zero-frame = <0x40>; /* make sure to configure this properly for your SOC */
-    color-mapping = <LED_COLOR_ID_GREEN
-                          LED_COLOR_ID_RED
-                          LED_COLOR_ID_BLUE>;
-  };
-};
