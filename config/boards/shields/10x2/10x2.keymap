@@ -15,7 +15,8 @@
 
 #define ALPHA       0
 #define SYM         1
-#define NUM         2
+/*#define NUM         2
+*\
 #define MOUSE       3
 #define MACRO       4
 #define FN          5
@@ -354,7 +355,7 @@
                         &trans  &trans       &trans      &none            &none    &trans   &trans         &trans
             >;
         };
-
+/*
         MOUSE_layer {
             display-name = "MOUSE";
             bindings = <
@@ -364,6 +365,7 @@
                       &none      &mkp MCLK       &mkp RCLK        &mkp LCLK                &trans      &trans &trans        &none
             >;
         };
+*\
 
         MACRO_layer {
             display-name = "MACRO";
