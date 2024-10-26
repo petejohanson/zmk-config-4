@@ -7,9 +7,9 @@ manifest:
     - name: miketronic
       url-base: https://github.com/miketronic
   projects:
-    - name: zmk
-      remote: caksoylar
-      revision: caksoylar/experimental
+   # - name: zmk
+   #   remote: caksoylar
+   #   revision: caksoylar/experimental
     - name: zmk
       remote: miketronic
       revision: rp2040zero
