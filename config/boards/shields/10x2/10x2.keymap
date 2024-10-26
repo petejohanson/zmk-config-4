@@ -327,7 +327,7 @@
             bindings = <
                 &tdW           &kp F              &lt NUM G          &kp M          &kp L    &kp U
                 &lt MACRO A    &kp R              &lt SYM S          &kp N          &kp E    &kp I
-                &lt FN C       &hrm LCTRL D       &hrm LALT T        &lt MOUSE H    &tdO     &tdY 
+                &lt FN C       &hrm LCTRL D       &hrm LALT T        &kp H    &tdO     &tdY 
                 &mt LSHIFT SPC   &mt RSHIFT RET
             >;
         };
