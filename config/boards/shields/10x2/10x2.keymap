@@ -351,17 +351,6 @@
                         &trans  &trans       &trans      &none            &none    &trans   &trans         &trans
             >;
         };
-/*
-        MOUSE_layer {
-            display-name = "MOUSE";
-            bindings = <
-                &none &none      &msc SCRL_UP    &mmv MOVE_UP     &msc SCRL_DOWN           &kp MINUS   &kp UNDER  &kp BSPC      &none &none
-                &none &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT          &none       &none  &none         &none &none
-                &none &none      &mkp MCLK       &mkp RCLK        &mkp LCLK                &none       &none  &cccv LC(C) LC(V)     &none &none
-                      &none      &mkp MCLK       &mkp RCLK        &mkp LCLK                &trans      &trans &trans        &none
-            >;
-        };
-*\
 
         MACRO_layer {
             display-name = "MACRO";
