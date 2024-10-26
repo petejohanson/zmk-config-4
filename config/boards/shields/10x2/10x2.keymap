@@ -15,9 +15,9 @@
 
 #define ALPHA       0
 #define SYM         1
-/*#define NUM         2
+#define NUM         2
+/*#define MOUSE       3
 *\
-#define MOUSE       3
 #define MACRO       4
 #define FN          5
 
