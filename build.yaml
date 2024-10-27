@@ -13,8 +13,8 @@
 #
 ---
 include:
-  - board: waveshare_rp2040_zero
-    shield: 10x2
+  #- board: waveshare_rp2040_zero
+  #  shield: 10x2
   - board: nice_nano_v2
     shield: desolation nice_view_adapter nice_view
     artifact-name: desolation_qwerty
