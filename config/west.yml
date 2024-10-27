@@ -6,8 +6,8 @@ manifest:
       url-base: https://github.com/caksoylar
     - name: miketronic
       url-base: https://github.com/miketronic
-    - name: glebsexy
-      url-base: https://github.com/glebsexy
+    - name: tubbytwins
+      url-base: https://github.com/tubbytwins
   projects:
    # - name: zmk
    #   remote: caksoylar
@@ -16,8 +16,8 @@ manifest:
   #    remote: miketronic
   #    revision: rp2040zero
      - name: zmk
-      remote: glebsexy
-      revision: add-rp2040-zero
+      remote: tubbytwins
+      revision: rp2040-zero-plus-combos-fix
       # remote: zmkfirmware
       # revision: main
       import: app/west.yml
