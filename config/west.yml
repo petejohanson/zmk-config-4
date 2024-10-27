@@ -6,20 +6,25 @@ manifest:
       url-base: https://github.com/caksoylar
     - name: miketronic
       url-base: https://github.com/miketronic
+    - name: glebsexy
+      url-base: https://github.com/glebsexy
   projects:
    # - name: zmk
    #   remote: caksoylar
    #   revision: caksoylar/experimental
-    - name: zmk
-      remote: miketronic
-      revision: rp2040zero
+  #  - name: zmk
+  #    remote: miketronic
+  #    revision: rp2040zero
+      - name: zmk
+      remote: glebsexy
+      revision: 9cec8ff
       # remote: zmkfirmware
       # revision: main
       import: app/west.yml
-    - name: zmk-keyboards-desolation
-      remote: miketronic
+   # - name: zmk-keyboards-desolation
+   #   remote: miketronic
       # main - v3
       # revision: main
-      revision: v1_3col_wfg
+   #   revision: v1_3col_wfg
   self:
     path: config
