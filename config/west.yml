@@ -17,7 +17,7 @@ manifest:
   #    revision: rp2040zero
      - name: zmk
       remote: glebsexy
-      revision: 9cec8ff
+      revision: add-rp2040-zero
       # remote: zmkfirmware
       # revision: main
       import: app/west.yml
