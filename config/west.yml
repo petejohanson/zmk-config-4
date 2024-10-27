@@ -15,7 +15,7 @@ manifest:
   #  - name: zmk
   #    remote: miketronic
   #    revision: rp2040zero
-      - name: zmk
+     - name: zmk
       remote: glebsexy
       revision: 9cec8ff
       # remote: zmkfirmware
