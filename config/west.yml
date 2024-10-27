@@ -7,12 +7,12 @@ manifest:
     - name: miketronic
       url-base: https://github.com/miketronic
   projects:
-   # - name: zmk
-   #   remote: caksoylar
-   #   revision: caksoylar/experimental
     - name: zmk
-      remote: miketronic
-      revision: rp2040zero
+      remote: caksoylar
+      revision: caksoylar/experimental
+    #- name: zmk
+    #  remote: miketronic
+    #  revision: rp2040zero
       # remote: zmkfirmware
       # revision: main
       import: app/west.yml
