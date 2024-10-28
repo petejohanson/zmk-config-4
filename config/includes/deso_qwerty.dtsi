@@ -14,11 +14,11 @@
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 
 
-#define DEFAULT     0
-#define SYMBOL      1
-#define NUMBER      2
-#define MOUSE       3 
-#define SCROLL      4
+#define DEF     0
+#define SYM     1
+#define NUM     2
+#define MSE     3 
+#define SCR     4
 
 &mt {
     flavor = "tap-preferred";
@@ -123,10 +123,10 @@
     };
 
     trackball_listener {
-        input-processors = <&zip_temp_layer MOUSE 1200>;
+        input-processors = <&zip_temp_layer MSE 1200>;
 
         scroll {
-            layers = <SCROLL>;
+            layers = <SCR>;
             input-processors = <&zip_xy_scaler 1 18>, <&to_wheel>, <&zip_scroll_transform (INPUT_TRANSFORM_Y_INVERT)>;
         };
     };
@@ -136,11 +136,11 @@
     mmv_input_listener {
         compatible = "zmk,input-listener";
         device = <&mm>;
-        input-processors = <&zip_xy_scaler 1 1>, <&zip_temp_layer MOUSE 1200>;
+        input-processors = <&zip_xy_scaler 1 1>, <&zip_temp_layer MSE 1200>;
 
         scroll {
             inherit;
-            layers = <MOUSE>;
+            layers = <MSE>;
             input-processors = <&zip_xy_scaler 1 7>, <&to_wheel>, <&zip_scroll_transform (INPUT_TRANSFORM_Y_INVERT)>;
         };
     };
