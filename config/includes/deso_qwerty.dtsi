@@ -29,7 +29,7 @@
     tapping_term_ms = <150>;
 };
 
-/ {
+{
     combos {
 
         compatible = "zmk,combos";
@@ -113,7 +113,7 @@
 #define MM_L MOVE_X(-U_MOUSE_MOVE_MAX)
 #define MM_R MOVE_X(U_MOUSE_MOVE_MAX)
 
-/ {
+ 
     to_wheel: to_wheel {
         compatible = "zmk,input-processor-code-mapper";
         #input-processor-cells = <0>;
