@@ -2,29 +2,19 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: caksoylar
-      url-base: https://github.com/caksoylar
     - name: miketronic
       url-base: https://github.com/miketronic
     - name: tubbytwins
       url-base: https://github.com/tubbytwins
   projects:
-   # - name: zmk
-   #   remote: caksoylar
-   #   revision: caksoylar/experimental
   #  - name: zmk
   #    remote: miketronic
   #    revision: rp2040zero
-     - name: zmk
+    - name: zmk
       remote: tubbytwins
       revision: rp2040-zero-plus-combos-fix
-      # remote: zmkfirmware
-      # revision: main
       import: app/west.yml
     - name: zmk-keyboards-10x2
       remote: miketronic
-      # main - v3
-      revision: main
-   #   revision: v1_3col_wfg
   self:
     path: config
