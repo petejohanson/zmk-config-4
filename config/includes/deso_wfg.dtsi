@@ -152,10 +152,10 @@
         mouse_layer {
             display-name = "MOUSE";
             bindings = <LAYER_FROM38( \
-                &none, &none, &msc SCRL_UP, &mmv MOVE_UP, &msc SCRL_DOWN, &kp MINUS, &kp UNDER, &kp BSPC, &none, &none, \
-                &none, &none, &mmv MOVE_LEFT, &mmv MOVE_DOWN, &mmv MOVE_RIGHT, &none, &none, &none, &none, &none, \
+                &none, &none, &msc SCRL_UP, &mm MM_U, &msc SCRL_DOWN, &kp MINUS, &kp UNDER, &kp BSPC, &none, &none, \
+                &none, &none, &mm MM_L, &mm MM_D, &mm MM_R, &none, &none, &none, &none, &none, \
                 &none, &none, &mkp MCLK, &mkp RCLK, &mkp LCLK, &none, &none, CPST, &none, &none, \
-                      &none, &mkp MCLK, &mkp RCLK, &mkp LCLK, &trans, &trans, &trans, &none \
+                      &none, &mkp MCLK, &mkp RCLK, &mkp LCLK, &mo SCROLL, &mo SCROLL, &trans, &none \
             )>;
         };
 
@@ -182,8 +182,8 @@
         scroll_layer {
             display-name = "SCROLL";
             bindings = <LAYER_FROM38( \
-                &none, &none, &msc SCRL_UP, &mmv MOVE_UP, &msc SCRL_DOWN, &kp MINUS, &kp UNDER, &kp BSPC, &none, &none, \
-                &none, &none, &mmv MOVE_LEFT, &mmv MOVE_DOWN, &mmv MOVE_RIGHT, &none, &none, &none, &none, &none, \
+                &none, &none, &msc SCRL_UP, &mm MM_U, &msc SCRL_DOWN, &kp MINUS, &kp UNDER, &kp BSPC, &none, &none, \
+                &none, &none, &mm MM_L, &mm MM_D, &mm MM_R, &none, &none, &none, &none, &none, \
                 &none, &none, &mkp MCLK, &mkp RCLK, &mkp LCLK, &none, &none, CPST, &none, &none, \
                       &none, &mkp MCLK, &mkp RCLK, &mkp LCLK, &trans, &trans, &trans, &none \
             )>;
@@ -191,92 +191,3 @@
     };
 };
 
-
-
-/*
-    keymap {
-        compatible = "zmk,keymap";
-
-        halmak_layer {
-            bindings = <
-                &kp W      &kp L      &kp R      &kp B      &kp Z          &kp SEMI   &kp Q      &kp U      &kp D      &kp J
-                HRML(S,        H,         N,         T)     &kp COMMA      &kp DOT   HRMR(A,         E,         O,         I)
-                &kp F      &kp M      &kp V      &kp C      &kp FSLH       &kp G    &lt SCROLL P &kp X      &kp K      &kp Y
-                                            &lt NUMS BSPC  &eth EDIT SPACE &lt NAVI ENTER
-            >;
-        };
-        qwerty_layer {
-            bindings = <
-                &kp Q      &kp W      &kp E      &kp R      &kp T          &kp Y      &kp U      &kp I      &kp O      &kp P
-                HRML(A,        S,         D,         F)     &kp G          &kp H     HRMR(J,         K,         L,         SEMI)
-                &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N    &lt SCROLL M &kp COMMA  &kp DOT    &kp FSLH
-                                            &lt NUMS BSPC  &eth EDIT SPACE &lt NAVI ENTER
-            >;
-        };
-        gamepad_layer {
-            bindings = <
-                &kp TAB    &kp Q      &kp W      &kp E      &kp G          &none      &kp N4     &kp N5     &kp N9     &kp STAR
-                &kp LSHFT  &kp A      &kp S      &kp D      &kp F          &none      &kp N1     &kp N2     &kp N3     &kp PLUS
-                &kp LCTRL  &kp Z      &kp X      &kp C      &kp V          &kp N   &lt SCROLL N8 &kp N6     &kp N7     &kp MINUS
-                                                 &kp R      &kp SPACE      &lt NAVI ENTER
-            >;
-        };
-        navigation_layer {
-            bindings = <
-                &kp CARET  &kp LBRC   &kp ASTRK  &kp RBRC   &none          &none      &kp HOME   &kp UP     &kp END    &kp PG_UP
-                HRML(EXCL,     LPAR,      HASH,      RPAR)  &none          &none      &kp LEFT   &kp DOWN   &kp RIGHT  &kp PG_DN
-                &kp QMARK  &kp AT     &kp PRCNT  &kp DLLR   &none          &none      &none      &none      &none      &none
-                                                 &kp DEL    &kp UNDER      &none
-            >;
-        };
-        edit_layer {
-            bindings = <
-                &kp ESC    &altab     &kp LC(TILDE) &none   &none          &none      &kp LBKT   &kp MINUS  &kp RBKT   &kp GRAVE
-              HRML(LC(Z),  LC(X),     LC(C),     LC(V))     &kp LC(LS(Z))  &kp TILDE  &kp LT     &kp EQUAL  &kp GT     &kp SQT
-                &none      &none      &none      &none      &none          &none      &kp FSLH   &kp PIPE   &kp BSLH   &kp DQT
-                                                 &none      &none          &kp AMPS
-            >;
-        };
-        nums_layer {
-            bindings = <
-                &none      &none      &none      &none      &none          &kp FSLH   &kp N4     &kp N5     &kp N9     &kp STAR
-                &kp LGUI   &kp LALT   &kp LSHFT  &kp LCTRL  &none          &kp DOT    &kp N1     &kp N2     &kp N3     &kp MINUS
-                &none      &none      &kp PRCNT  &kp DLLR   &none          &kp COMMA  &kp N8     &kp N6     &kp N7     &kp PLUS
-                                                 &none      &none          &kp 0
-            >;
-        };
-        settings_layer {
-            bindings = <
-                &to QWERTY &none      &none    &out OUT_TOG &bt BT_SEL 0   &none      &kp F4     &kp F5     &kp F9     &kp F10
-                &to HALMAK &none      &kp LSHFT  &none      &bt BT_SEL 1   &none      &kp F1     &kp F2     &kp F3     &kp F11
-                &to GAMPAD &none      &none      &none      &bt BT_SEL 2   &none      &kp F8     &kp F6     &kp F7     &kp F12
-                                                 &none      &none          &none
-            >;
-        };
-        altab_layer {
-            bindings = <
-                &altab_x   &kp TAB    &altab_x   &altab_x   &altab_x       &altab_x   &altab_x   &altab_x   &altab_x   &altab_x
-                &altab_x   &altab_x   &altab_x   &altab_x   &altab_x       &altab_x   &altab_x   &altab_x   &altab_x   &altab_x
-                &altab_x   &altab_x   &altab_x   &altab_x   &altab_x       &altab_x   &altab_x   &altab_x   &altab_x   &altab_x
-                                                 &altab_x   &altab_x       &altab_x
-            >;
-        };
-        mouse_layer {
-            bindings = <
-                &none      &none      &none      &none      &none          &none      &none      &mm MM_U   &none      &none
-                &none      &none      &none      &none      &none          &none      &mkp LCLK  &mm MM_D   &mkp RCLK  &mo SCROLL
-                &none      &none      &none      &none      &none          &none      &none      &mkp MCLK  &none      &none
-                                                 &none      &none          &none
-            >;
-        };
-        scroll_layer {
-            bindings = <
-                &none      &none      &none      &none      &none          &none      &none      &mm MM_U   &none      &none
-                &none      &none      &none      &none      &none          &none      &mkp LCLK  &mm MM_D   &mkp RCLK  &none
-                &none      &none      &none      &none      &none          &none      &none      &mkp MCLK  &none      &none
-                                                 &none      &none          &none
-            >;
-        };
-    };
-};
-*/
