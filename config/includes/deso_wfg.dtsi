@@ -17,13 +17,13 @@
 #include "behaviors.dtsi"
 
 // Layer aliases
-#define DEFAULT  0
-#define SYMBOL   1
-#define NUMBER   2
-#define MOUSE    3
-#define MACRO    4
-#define FUNCTION 5
-#define SCROLL   6
+#define DEF      0
+#define SYM      1
+#define NUM      2
+#define MSE      3
+#define MAC      4
+#define FUN      5
+#define SCR      6
 
 // Short defines
 // #define D_LT   LC(LG(LEFT))
@@ -73,10 +73,10 @@
     };
 
     trackball_listener {
-        input-processors = <&zip_temp_layer MOUSE 1200>;
+        input-processors = <&zip_temp_layer MSE 1200>;
 
         scroll {
-            layers = <SCROLL>;
+            layers = <SCR>;
             input-processors = <&zip_xy_scaler 1 18>, <&to_wheel>, <&zip_scroll_transform (INPUT_TRANSFORM_Y_INVERT)>;
         };
     };
@@ -85,11 +85,11 @@
     mmv_input_listener {
         compatible = "zmk,input-listener";
         device = <&mm>;
-        input-processors = <&zip_xy_scaler 1 1>, <&zip_temp_layer MOUSE 1200>;
+        input-processors = <&zip_xy_scaler 1 1>, <&zip_temp_layer MSE 1200>;
 
         scroll {
             inherit;
-            layers = <MOUSE>;
+            layers = <MSE>;
             input-processors = <&zip_xy_scaler 1 7>, <&to_wheel>, <&zip_scroll_transform (INPUT_TRANSFORM_Y_INVERT)>;
         };
     };
@@ -106,73 +106,73 @@
 // ---------------------------------------------------------------------------------------------------------------
         default_layer {
             display-name = "-DESO-";            
-            bindings = <
-                &none &none &tdW &kp F &lt NUM G &kp M &kp L &kp U &none &none
-                &none &none &lt MAC A &kp R &lt SYM S &kp N &kp E &kp I &none &none
-                &none &none &lt FUN C &hrm LCTRL D &hrm LALT T &lt MSE H &tdO &tdY &none &none
-                &kp R CPST  SFTSPC SFTSPC SFTENT SFTENT  &kp DEL &kp A
-            >;
+            bindings = <LAYER_FROM38( \
+                &none, &none, &tdW, &kp F, &lt NUM G, &kp M, &kp L, &kp U, &none, &none, \
+                &none, &none, &lt MAC A, &kp R, &lt SYM S, &kp N, &kp E, &kp I, &none, &none, \
+                &none, &none, &lt FUN C, &hrm LCTRL D, &hrm LALT T, &lt MSE H, &tdO, &tdY, &none, &none, \
+                &kp R, CPST,  SFTSPC, SFTSPC, SFTENT, SFTENT,  &kp DEL, &kp A \
+            )>;
         };
 
 
-        symbol_layer {
+        SYM_layer {
             display-name = "SYMBOL";
-            bindings = <
-                &none &none &grvtld &kp STAR &none &par &bkt &thn &none &none
-                &none &none &none &kp PLUS &none &cln &sls &pipe &none &none
-                &none &none &none &none &none &qot &at &perc &none &none
-                &trans &trans &trans &none &none &trans &trans  &trans
-            >;
+            bindings = <LAYER_FROM38( \
+                &none, &none, &grvtld, &kp STAR, &none, &par, &bkt, &thn, &none, &none, \
+                &none, &none, &none, &kp PLUS, &none, &cln, &sls, &pipe, &none, &none, \
+                &none, &none, &none, &none, &none, &qot, &at, &perc, &none, &none, \
+                &trans, &trans, &trans, &none, &none, &trans, &trans,  &trans \
+            )>;
         };
 
-        number_layer {
+        NUM_layer {
             display-name = "NUMBER";
-            bindings = <
-                &none &none &kp TAB &kp STAR &none &kp N7 &kp N8 &kp N9 &none &none
-                &none &none &none &none &none &kp N4 &kp N5 &kp N6 &none &none
-                &none &none &bootloader &none &none &kp N1 &td20 &kp N3 &none &none
-                       &trans &trans &trans &none &none &trans &trans &trans
-            >;
+            bindings = <LAYER_FROM38( \
+                &none, &none, &kp TAB, &kp STAR, &none, &kp N7, &kp N8, &kp N9, &none, &none, \
+                &none, &none, &none, &none, &none, &kp N4, &kp N5, &kp N6, &none, &none, \
+                &none, &none, &bootloader, &none, &none, &kp N1, &td20, &kp N3, &none, &none, \
+                       &trans, &trans, &trans, &none, &none, &trans, &trans, &trans \
+            )>;
         };
 
-        mouse_layer {
+        MSE_layer {
             display-name = "MOUSE";
-            bindings = <
-                &none &none &msc SCRL_UP &mm MM_U &msc SCRL_DOWN &kp MINUS &kp UNDER &kp BSPC &none &none
-                &none &none &mm MM_L &mm MM_D &mm MM_R &none &none &none &none &none
-                &none &none &mkp MCLK &mkp RCLK &mkp LCLK &none &none CPST &none &none
-                      &none &mkp MCLK &mkp RCLK &mkp LCLK &mo SCROLL &mo SCROLL &trans &none
-            >;
+            bindings = <LAYER_FROM38( \
+                &none, &none, &msc SCRL_UP, &mm MM_U, &msc SCRL_DOWN, &kp MINUS, &kp UNDER, &kp BSPC, &none, &none, \
+                &none, &none, &mm MM_L, &mm MM_D, &mm MM_R, &none, &none, &none, &none, &none, \
+                &none, &none, &mkp MCLK, &mkp RCLK, &mkp LCLK, &none, &none, CPST, &none, &none, \
+                      &none, &mkp MCLK, &mkp RCLK, &mkp LCLK, &mo SCR, &mo SCR, &trans, &none \
+            )>;
         };
 
-        macro_layer {
+        MAC_layer {
             display-name = "MACRO";
-            bindings = <
-                &none &none &none &none &none &none &none &none &none &none
-                &none &none &trans &lines &square &none &none &none &none &none
-                &none &none &none &date &time &th &re &yw &none &none
-                      &trans &trans &trans &none &none &trans &trans &trans
-            >;
+            bindings = <LAYER_FROM38( \
+                &none, &none, &none, &none, &none, &none, &none, &none, &none, &none, \
+                &none, &none, &trans, &lines, &square, &none, &none, &none, &none, &none, \
+                &none, &none, &none, &date, &time, &th, &re, &yw, &none, &none, \
+                      &trans, &trans, &trans, &none, &none, &trans, &trans, &trans \
+            )>;
         };
 
-        function_layer {
+        FUN_layer {
             display-name = "FUNCTION";    
-            bindings = <
-                &none &none CPST CLIP GSHT &kp F2 &kp UP &kp DEL &none &none
-                &none &none &kp TAB &none &pg &kp LEFT &kp DOWN &kp RIGHT &none &none
-                &none &none &trans &kp LC(BSPC) &hmend &kp LC(Z) &kp DEL &kp LC(Y) &none &none
-                      &trans &trans &trans &none &none &trans &trans &trans
-            >;
+            bindings = <LAYER_FROM38( \
+                &none, &none, CPST, CLIP, GSHT, &kp F2, &kp UP, &kp DEL, &none, &none, \
+                &none, &none, &kp TAB, &none, &pg, &kp LEFT, &kp DOWN, &kp RIGHT, &none, &none, \
+                &none, &none, &trans, &kp LC(BSPC), &hmend, &kp LC(Z), &kp DEL, &kp LC(Y), &none, &none, \
+                      &trans, &trans, &trans, &none, &none, &trans, &trans, &trans \
+            )>;
         };
 
-        scroll_layer {
+        SCR_layer {
             display-name = "SCROLL";
-            bindings = <
-                &none &none &msc SCRL_UP &mm MM_U &msc SCRL_DOWN &kp MINUS &kp UNDER &kp BSPC &none &none
-                &none &none &mm MM_L &mm MM_D &mm MM_R &none &none &none &none &none
-                &none &none &mkp MCLK &mkp RCLK &mkp LCLK &none &none CPST &none &none
-                      &none &mkp MCLK &mkp RCLK &mkp LCLK &trans &trans &trans &none
-            >;
+            bindings = <LAYER_FROM38( \
+                &none, &none, &msc SCRL_UP, &mm MM_U, &msc SCRL_DOWN, &kp MINUS, &kp UNDER, &kp BSPC, &none, &none, \
+                &none, &none, &mm MM_L, &mm MM_D, &mm MM_R, &none, &none, &none, &none, &none, \
+                &none, &none, &mkp MCLK, &mkp RCLK, &mkp LCLK, &none, &none, CPST, &none, &none, \
+                      &none, &mkp MCLK, &mkp RCLK, &mkp LCLK, &trans, &trans, &trans, &none \
+            )>;
         };
     };
 };
