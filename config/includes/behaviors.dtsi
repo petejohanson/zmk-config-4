@@ -158,6 +158,17 @@ KEY POSITIONS (using keypos_def helpers)
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
+        // keys to a fake mouse input device
+        mm: mouse_move {
+            compatible = "zmk,behavior-input-two-axis";
+            #binding-cells = <1>;
+            trigger-period-ms = <12>;
+            x-input-code = <INPUT_REL_X>;
+            y-input-code = <INPUT_REL_Y>;
+            time-to-max-speed-ms = <10>;
+            acceleration-exponent = <1>;
+        };
     };
 };
 
