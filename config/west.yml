@@ -1,15 +1,15 @@
 manifest:
   remotes:
     - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
+      url-base: https://github.com/petejohanson
     - name: caksoylar
       url-base: https://github.com/caksoylar
     - name: miketronic
       url-base: https://github.com/miketronic
   projects:
     - name: zmk
-      remote: caksoylar
-      revision: caksoylar/experimental
+      remote: zmkfirmware
+      revision: feat/pointers-with-input-processors
     #- name: zmk
     #  remote: miketronic
     #  revision: rp2040zero
