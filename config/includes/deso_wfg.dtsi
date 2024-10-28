@@ -94,7 +94,6 @@
         };
     };
 
-{
    keymap {
         compatible = "zmk,keymap";
 
