@@ -21,10 +21,10 @@ manifest:
       # remote: zmkfirmware
       # revision: main
       import: app/west.yml
-   # - name: zmk-keyboards-desolation
-   #   remote: miketronic
+    - name: zmk-keyboards-10x2
+      remote: miketronic
       # main - v3
-      # revision: main
+      revision: main
    #   revision: v1_3col_wfg
   self:
     path: config
