@@ -15,7 +15,9 @@
 #define MACRO       3
 #define FN          4
 
-
+#define CPST &cccv LC(C) LC(V)
+#define CLIP &kp LC(LA(Q))
+#define GSHT &kp LC(LA(G))
 
 
 &mt {
@@ -203,14 +205,14 @@
         tdO: tap_dance_O {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <180>;
             bindings = <&kp O>, <&kp COMMA>;
         };
 
         tdY: tap_dance_Y {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <180>;
             bindings = <&kp Y>, <&kp DOT>;
         };
 
@@ -348,10 +350,10 @@
 
         FN_layer {  
             bindings = <
-                &none &none   &cccv LC(C) LC(V)  &kp LC(LA(Q))   &kp LC(LA(G))    &kp F2       &kp UP      &kp DEL    &none &none
-                &none &none   &kp TAB            &none           &pg              &kp LEFT     &kp DOWN    &kp RIGHT  &none &none
-                &none &none   &trans             &kp LC(BSPC)    &hmend           &kp LC(Z)    &kp DEL     &kp LC(Y)  &none &none
-                      &trans  &trans             &trans          &none            &none        &trans      &trans     &trans
+                &none &none   CPST         CLIP            GSHT        &kp F2       &kp UP      &kp DEL    &none &none
+                &none &none   &kp TAB      &none           &pg         &kp LEFT     &kp DOWN    &kp RIGHT  &none &none
+                &none &none   &trans       &kp LC(BSPC)    &hmend      &kp LC(Z)    &kp DEL     &kp LC(Y)  &none &none
+                      &trans  &trans       &trans          &none       &none        &trans      &trans     &trans
             >;
         };
     };
