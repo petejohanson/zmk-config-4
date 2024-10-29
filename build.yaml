@@ -15,4 +15,3 @@
 include:
   - board: waveshare_rp2040_zero
     shield: 10x2
-  
