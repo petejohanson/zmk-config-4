@@ -262,6 +262,7 @@
     macros {
         th: ahk_th {
             compatible = "zmk,behavior-macro";
+            label = "macro_th";
             #binding-cells = <0>;
             bindings
                 = <&macro_tap &kp FSLH &kp FSLH &kp T &kp H>
@@ -270,6 +271,7 @@
 
         re: ahk_re {
             compatible = "zmk,behavior-macro";
+            label = "macro_re";
             #binding-cells = <0>;
             bindings
                 = <&macro_tap &kp FSLH &kp FSLH &kp R &kp E>
@@ -278,6 +280,7 @@
 
         yw: ahk_yw {
             compatible = "zmk,behavior-macro";
+            label = "macro_yw";
             #binding-cells = <0>;
             bindings
                 = <&macro_tap &kp FSLH &kp FSLH &kp Y &kp W>
@@ -286,6 +289,7 @@
 
         date: ahk_date {
             compatible = "zmk,behavior-macro";
+            label = "macro_date";
             #binding-cells = <0>;
             bindings
                 = <&macro_tap &kp FSLH &kp FSLH &kp A &kp N1 &kp N1>
@@ -294,6 +298,7 @@
 
         time: ahk_time {
             compatible = "zmk,behavior-macro";
+            label = "macro_time";
             #binding-cells = <0>;
             bindings
                 = <&macro_tap &kp FSLH &kp FSLH &kp A &kp N1 &kp N2>
@@ -302,6 +307,7 @@
 
         lines: ahk_lines {
             compatible = "zmk,behavior-macro";
+            label = "macro_lines";
             #binding-cells = <0>;
             bindings
                 = <&macro_tap &kp FSLH &kp FSLH &kp A &kp N0 &kp N8>
@@ -310,6 +316,7 @@
 
         square: ahk_square {
             compatible = "zmk,behavior-macro";
+            label = "macro_square";
             #binding-cells = <0>;
             bindings
                 = <&macro_tap &kp FSLH &kp FSLH &kp A &kp N0 &kp N9>
