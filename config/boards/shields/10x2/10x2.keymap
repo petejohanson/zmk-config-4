@@ -113,6 +113,7 @@
 
         bkt: tap_dance_bracket {
             compatible = "zmk,behavior-tap-dance";
+            label = "tap_dance_bracket";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp LBKT>, <&kp RBKT>;
@@ -120,6 +121,7 @@
 
         cln: tap_dance_colon {
             compatible = "zmk,behavior-tap-dance";
+            label = "tap_dance_colon";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp COLON>, <&kp SEMI>;
