@@ -4,15 +4,10 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: miketronic
       url-base: https://github.com/miketronic
-    - name: glebsexy
-      url-base: https://github.com/glebsexy
   projects:
     - name: zmk
       remote: miketronic
       revision: rp2040zero
-   # - name: zmk
-   #   remote: glebsexy
-   #   revision: add-rp2040-zero
       import: app/west.yml
     - name: zmk-keyboards-10x2
       remote: miketronic
