@@ -1,7 +1,7 @@
 manifest:
   remotes:
     - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
+      url-base: https://github.com/petejohanson
     - name: miketronic
       url-base: https://github.com/miketronic
   projects:
@@ -9,6 +9,9 @@ manifest:
       remote: miketronic
       revision: rp2040zero
       import: app/west.yml
+    - name: zmk1
+      remote: zmkfirmware
+      revision: feat/pointers-with-input-processors
     - name: zmk-keyboards-10x2
       remote: miketronic
       revision: main
