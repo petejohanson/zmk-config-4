@@ -23,7 +23,6 @@
 #define MSE      3
 #define MAC      4
 #define FUN      5
-#define SCR      6
 
 // Short defines
 // #define D_LT   LC(LG(LEFT))
@@ -38,6 +37,16 @@
 #define CLIP &kp LC(LA(Q))
 #define GSHT &kp LC(LA(G))
 
+#define MM_U &mmv MOVE_UP
+#define MM_D &mmv MOVE_DOWN
+#define MM_R &mmv MOVE_RIGHT
+#define MM_L &mmv MOVE_LEFT
+
+#define MS_U &msc MOVE_UP
+#define MS_D &msc MOVE_DOWN
+#define MS_R &msc MOVE_RIGHT
+#define MS_L &msc MOVE_LEFT
+
 &mt {
     flavor = "hold-preferred";
     tapping-term-ms = <160>;
@@ -50,49 +59,9 @@
 
 
 
-#ifndef MOVE_Y
-#define MOVE_Y(n) (0)
-#endif
-#ifndef MOVE_X
-#define MOVE_X(n) (0)
-#endif
 
-#define U_MOUSE_MOVE_MAX 1700
-#define MM_U MOVE_Y(-U_MOUSE_MOVE_MAX)
-#define MM_D MOVE_Y(U_MOUSE_MOVE_MAX)
-#define MM_L MOVE_X(-U_MOUSE_MOVE_MAX)
-#define MM_R MOVE_X(U_MOUSE_MOVE_MAX)
 
 / {
-    to_wheel: to_wheel {
-        compatible = "zmk,input-processor-code-mapper";
-        #input-processor-cells = <0>;
-        type = <INPUT_EV_REL>;
-        map = <INPUT_REL_X INPUT_REL_HWHEEL>
-            , <INPUT_REL_Y INPUT_REL_WHEEL>;
-    };
-
-    trackball_listener {
-        input-processors = <&zip_temp_layer MSE 1200>;
-
-        scroll {
-            layers = <SCR>;
-            input-processors = <&zip_xy_scaler 1 18>, <&to_wheel>, <&zip_scroll_transform (INPUT_TRANSFORM_Y_INVERT)>;
-        };
-    };
-
-    // mapping the fake keys to mouse device tack to the layers
-    mmv_input_listener {
-        compatible = "zmk,input-listener";
-        device = <&mm>;
-        input-processors = <&zip_xy_scaler 1 1>, <&zip_temp_layer MSE 1200>;
-
-        scroll {
-            inherit;
-            layers = <MSE>;
-            input-processors = <&zip_xy_scaler 1 7>, <&to_wheel>, <&zip_scroll_transform (INPUT_TRANSFORM_Y_INVERT)>;
-        };
-    };
 
    keymap {
         compatible = "zmk,keymap";
@@ -138,8 +107,8 @@
         MSE_layer {
             display-name = "MOUSE";
             bindings = <LAYER_FROM38( \
-                &none, &none, &msc SCRL_UP, &mm MM_U, &msc SCRL_DOWN, &kp MINUS, &kp UNDER, &kp BSPC, &none, &none, \
-                &none, &none, &mm MM_L, &mm MM_D, &mm MM_R, &none, &none, &none, &none, &none, \
+                &none, &none, MS_U, MM_U, MS_D, &kp MINUS, &kp UNDER, &kp BSPC, &none, &none, \
+                &none, &none, MM_L, MM_D, MM_R, &none, &none, &none, &none, &none, \
                 &none, &none, &mkp MCLK, &mkp RCLK, &mkp LCLK, &none, &none, CPST, &none, &none, \
                       &none, &mkp MCLK, &mkp RCLK, &mkp LCLK, &mo SCR, &mo SCR, &trans, &none \
             )>;
@@ -165,14 +134,5 @@
             )>;
         };
 
-        SCR_layer {
-            display-name = "SCROLL";
-            bindings = <LAYER_FROM38( \
-                &none, &none, &msc SCRL_UP, &mm MM_U, &msc SCRL_DOWN, &kp MINUS, &kp UNDER, &kp BSPC, &none, &none, \
-                &none, &none, &mm MM_L, &mm MM_D, &mm MM_R, &none, &none, &none, &none, &none, \
-                &none, &none, &mkp MCLK, &mkp RCLK, &mkp LCLK, &none, &none, CPST, &none, &none, \
-                      &none, &mkp MCLK, &mkp RCLK, &mkp LCLK, &trans, &trans, &trans, &none \
-            )>;
-        };
     };
 };
