@@ -110,7 +110,7 @@
                 &none, &none, MS_U, MM_U, MS_D, &kp MINUS, &kp UNDER, &kp BSPC, &none, &none, \
                 &none, &none, MM_L, MM_D, MM_R, &none, &none, &none, &none, &none, \
                 &none, &none, &mkp MCLK, &mkp RCLK, &mkp LCLK, &none, &none, CPST, &none, &none, \
-                      &none, &mkp MCLK, &mkp RCLK, &mkp LCLK, &mo SCR, &mo SCR, &trans, &none \
+                      &none, &mkp MCLK, &mkp RCLK, &mkp LCLK, &trans, &trans, &trans, &none \
             )>;
         };
 
