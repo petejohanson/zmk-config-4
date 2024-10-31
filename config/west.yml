@@ -8,6 +8,7 @@ manifest:
     - name: zmk
       remote: zmkfirmware
       revision: feat/pointers-with-input-processors
+      import: app/west.yml
     - name: zmk-keyboards-10x2
       remote: miketronic
       revision: main
