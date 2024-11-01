@@ -6,10 +6,10 @@ manifest:
       url-base: https://github.com/miketronic
   projects:
     - name: zmk
-    #  remote: zmkfirmware
-    #  revision: feat/pointers-with-input-processors
-      remote: miketronic
-      revision: rp2040zero
+      remote: zmkfirmware
+      revision: feat/pointers-with-input-processors
+    #  remote: miketronic
+    #  revision: rp2040zero
       import: app/west.yml
     - name: zmk-keyboards-10x2
       remote: miketronic
