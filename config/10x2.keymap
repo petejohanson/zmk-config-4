@@ -23,7 +23,7 @@
 #define GSHT &kp LC(LA(G))
 
 #define MIN   &kp MINUS
-#define BSPC  &kp BSPC
+#define BSP   &kp BSPC
 #define UNDR  &kp UNDER
 #define NNN   &none
 
@@ -357,7 +357,7 @@
 
         mouse_layer {
             bindings = <
-                MS_U    MM_U    MS_D    MIN    UNDR  BSPC
+                MS_U    MM_U    MS_D    MIN    UNDR  BSP
                 MM_L    MM_D    MM_R    NNN    NNN   NNN
                 MCK     RCK     LCK     NNN    NNN   CPST
                 RCK     LCK
