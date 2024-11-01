@@ -330,8 +330,8 @@
 
         default_layer {
             bindings = <
-                &tdW           &kp F              &lt NUM G          &kp M          &kp L    &kp U
-                &lt MAC A      &kp R              &lt SYM S          &kp N          &kp E    &kp I
+                &tdW           &kp N1              &lt NUM G          &kp M          &kp L    &kp U
+                &lt MAC A      &kp N1              &lt SYM S          &kp N          &kp E    &kp I
                 &lt FN C       &hrm LCTRL D       &hrm LALT T        &lt MSE H      &tdO     &tdY
                                                   &mt LSHIFT SPC     &mt RSHIFT RET
             >;
@@ -348,10 +348,10 @@
 
         number_layer {
             bindings = <
-                &kp TAB      &kp STAR  &trans     &kp N7   &kp N8   &kp N9
-                &kp N1          &kp N1       &kp N1     &kp N4   &kp N5   &kp N6
-                &kp N1  &kp N1       &kp N1     &kp N1   &td20    &kp N3
-                &kp N1          &kp N1    
+                &kp TAB &kp STAR  &trans     &kp N7   &kp N8   &kp N9
+                ---  ---   ---               &kp N4   &kp N5   &kp N6
+                ---  ---   ---               &kp N1   &td20    &kp N3
+                ---  ---    
             >;
         };
 
