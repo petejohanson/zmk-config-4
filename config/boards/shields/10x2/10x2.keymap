@@ -329,26 +329,17 @@
         compatible = "zmk,keymap";
 
         default_layer {
-// ---------------------------------------------------------------------------------------------------------------
-// |   TAB   |    W   [Q]   F   [B]   G num|         |    X    |         |    M   [J]   L    |    U    |  BSPC   |
-// |  SHIFT  | A macro[V]   R   [P]   S sym|         |    X    |         |    N   [K]   E   [!]   I    |  DEL    |
-// |  XXXX   |  C  fn [Z]   D   [X]   T    |         |    X    |         | H mouse |  O tt,  |  Y  tt. |  XXXX   |
-//                     |   CCCV  |SPC/SHFT | RETURN  |    X    |   SPC   | SPC/ENT |   Paste |
-// ---------------------------------------------------------------------------------------------------------------         
             bindings = <
                 &tdW           &kp F              &lt NUM G          &kp M          &kp L    &kp U
                 &lt MAC A      &kp R              &lt SYM S          &kp N          &kp E    &kp I
-                &lt FN C       &hrm LCTRL D       &hrm LALT T        &lt MSE H      &tdO     &tdY 
+                &lt FN C       &hrm LCTRL D       &hrm LALT T        &lt MSE H      &tdO     &tdY
                 &mt LSHIFT SPC   &mt RSHIFT RET
             >;
         };
 
         symbol_layer {
             bindings = <
-                &grtl   &kp STAR    ---    &par   &bkt   &thn
-                ---     &kp PLUS    ---    &cln   &sls   &pipe
-                ---     ---         ---    &qot   &at    &perc
-                ---     ---  
+                &grtl &kp STAR &trans &par &bkt &thn &trans &kp PLUS &trans &cln &sls &pipe --- --- --- &qot &at &perc --- ---
             >;
         };
 
