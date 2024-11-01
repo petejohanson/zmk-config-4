@@ -1,4 +1,4 @@
-/*
+e/*
  * Copyright (c) 2024 miketronic
  * SPDX-License-Identifier: MIT
  * 10x2
@@ -339,10 +339,10 @@
 
         symbol_layer {
             bindings = <
-                &grtl &kp STAR --- &par &bkt &thn --- ---
-                --- &kp PLUS --- &cln &sls &pipe
-                --- --- --- &qot &at &perc 
-                --- ---
+                &grtl &kp STAR ---        &par &bkt &thn
+                ---   &kp PLUS ---        &cln &sls &pipe
+                ---   ---      ---        &qot &at &perc 
+                               ---        ---
             >;
         };([<+:
 
