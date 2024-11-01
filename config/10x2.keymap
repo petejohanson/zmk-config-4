@@ -25,7 +25,7 @@
 #define MIN   &kp MINUS
 #define BSPC  &kp BSPC
 #define UNDR  &kp UNDER
-#define ---   &none
+#define ~~~   &none
 
 #define MM_U &mmv MOVE_UP
 #define MM_D &mmv MOVE_DOWN
@@ -339,46 +339,46 @@
 
         symbol_layer {
             bindings = <
-                &grtl &kp STAR ---        &par &bkt &thn
-                ---   &kp PLUS ---        &cln &sls &pipe
-                ---   ---      ---        &qot &at &perc 
-                               ---        ---
+                &grtl &kp STAR ~~~        &par &bkt &thn
+                ~~~   &kp PLUS ~~~        &cln &sls &pipe
+                ~~~   ~~~      ~~~        &qot &at &perc 
+                               ~~~        ~~~
             >;
         };([<+:
 
         number_layer {
             bindings = <
                 &kp TAB &kp STAR  &trans     &kp N7   &kp N8   &kp N9
-                ---  ---   ---               &kp N4   &kp N5   &kp N6
-                ---  ---   ---               &kp N1   &td20    &kp N3
-                ---  ---    
+                ~~~  ~~~   ~~~               &kp N4   &kp N5   &kp N6
+                ~~~  ~~~   ~~~               &kp N1   &td20    &kp N3
+                ~~~  ~~~    
             >;
         };
 
         mouse_layer {
             bindings = <
                 MS_U    MM_U    MS_D    MIN    UNDR  BSPC
-                MM_L    MM_D    MM_R    ---    ---   ---
-                MCK     RCK     LCK     ---    ---   CPST
+                MM_L    MM_D    MM_R    ~~~    ~~~   ~~~
+                MCK     RCK     LCK     ~~~    ~~~   CPST
                 RCK     LCK
             >;
         };
 
         macro_layer {
             bindings = <
-                ---     ---     ---      --- --- ---
-                &trans  &lines  &square  --- --- ---
-                ---     &date   &time    &th &re &yw
-                ---     ---
+                ~~~     ~~~     ~~~      ~~~ ~~~ ~~~
+                &trans  &lines  &square  ~~~ ~~~ ~~~
+                ~~~     &date   &time    &th &re &yw
+                ~~~     ~~~
             >;
         };
 
         function_layer {  
             bindings = <
                 CPST       CLIP         GSHT     &kp F2       &kp UP      &kp DEL
-                &kp TAB    ---          &pg      &kp LEFT     &kp DOWN    &kp RIGHT
+                &kp TAB    ~~~          &pg      &kp LEFT     &kp DOWN    &kp RIGHT
                 &trans     &kp LC(BSPC) &hmend   &kp LC(Z)    &kp DEL     &kp LC(Y)
-                ---        ---
+                ~~~        ~~~
             >;
         };
     };
