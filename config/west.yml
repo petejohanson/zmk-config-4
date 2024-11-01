@@ -13,6 +13,6 @@ manifest:
       import: app/west.yml
     - name: zmk-keyboards-10x2
       remote: miketronic
-      revision: main
+      revision: zero
   self:
     path: config
