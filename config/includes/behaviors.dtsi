@@ -86,7 +86,7 @@ KEY POSITIONS (using keypos_def helpers)
             bindings = <&kp AT>, <&kp HASH>;
         };
 
-        grvtld: tap_dance_gravetilde {
+        grtl: tap_dance_gravetilde {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
