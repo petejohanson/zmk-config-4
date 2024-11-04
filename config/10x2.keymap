@@ -66,7 +66,6 @@
             layers = <MSE>;
             input-processors = <&zip_xy_scaler 2 1>;
         };
-
         snipe {
             layers = <SNP>;
             input-processors = <&zip_xy_scaler 1 4>;
@@ -74,6 +73,8 @@
 };
 
 / {
+
+
     keymap {
         compatible = "zmk,keymap";
 
