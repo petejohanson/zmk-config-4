@@ -158,7 +158,27 @@ KEY POSITIONS (using keypos_def helpers)
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
+        // keys to a fake mouse input device
+        mm: mouse_move {
+            compatible = "zmk,behavior-input-two-axis";
+            #binding-cells = <1>;
+            trigger-period-ms = <12>;
+            x-input-code = <INPUT_REL_X>;
+            y-input-code = <INPUT_REL_Y>;
+            time-to-max-speed-ms = <30>;
+            acceleration-exponent = <1>;
+        };
+
+        mmv_listener {
+            compatible = "zmk,input-listener";
+            device = <&mm>;
+            input-processors = <&zip_temp_layer MSE 1000>;
+
+            snipe {
+                layers = <SNP>;
+                input-processors = <&zip_xy_scaler 1 4>;
+            }
+        };
     };
 };
-
-  
