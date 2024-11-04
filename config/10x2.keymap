@@ -61,10 +61,7 @@
     tapping-term-ms = <150>;
 };
 
-/ {
-
-    behaviors {
-
+&mmv_input_listener {
         standard {
             layers = <MSE>;
             input-processors = <&zip_xy_scaler 2 1>;
@@ -74,8 +71,9 @@
             layers = <SNP>;
             input-processors = <&zip_xy_scaler 1 4>;
         };
-    };
+};
 
+/ {
     keymap {
         compatible = "zmk,keymap";
 
