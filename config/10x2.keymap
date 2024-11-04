@@ -50,14 +50,6 @@
 #define RCK  &mkp RCLK  
 #define LCK  &mkp LCLK 
 
-#define COMBO(NAME, BINDINGS, KEYPOS, TERM) \
-    combo_##NAME { \
-        timeout-ms = <TERM>; \
-        bindings = <BINDINGS>; \
-        key-positions = <KEYPOS>; \
-    };
-
-
 &mt {
     tapping-term-ms = <160>;
 };
@@ -83,20 +75,84 @@
     };
 
     combos {
-        compatible = "zmk,combos";
 
-        COMBO(q,      &kp Q,       0 1, 50)
-        COMBO(b,      &kp B,       1 2, 50)
-        COMBO(j,      &kp J,       3 4, 50)
-        COMBO(bspc,   &kp BSPC,    4 5, 50)
-        COMBO(v,      &kp V,       6 7, 50)
-        COMBO(p,      &kp P,       7 8, 50)
-        COMBO(k,      &kp K,       9 10, 50)
-        COMBO(excl,   &kp EXCL,    10 11, 50)
-        COMBO(z,      &kp Z,       12 13, 50)
-        COMBO(x,      &kp X,       13 14, 50)
-        COMBO(qmark,  &kp QMARK,   16 17, 50)
+        compatible = "zmk,combos";
+        combo_q {
+            timeout-ms = <50>;
+            key-positions = <0 1>;
+            bindings = <&kp Q>;
         };
+
+        compatible = "zmk,combos";
+        combo_b {
+            timeout-ms = <50>;
+            key-positions = <1 2>;
+            bindings = <&kp B>;
+        };
+
+        compatible = "zmk,combos";
+        combo_j {
+            timeout-ms = <50>;
+            key-positions = <3 4>;
+            bindings = <&kp J>;
+        };
+
+        compatible = "zmk,combos";
+        combo_bspc {
+            timeout-ms = <50>;
+            key-positions = <4 5>;
+            bindings = <&kp BSPC>;
+        };
+
+        compatible = "zmk,combos";
+        combo_v {
+            timeout-ms = <50>;
+            key-positions = <6 7>;
+            bindings = <&kp V>;
+        };
+
+        compatible = "zmk,combos";
+        combo_p {
+            timeout-ms = <50>;
+            key-positions = <7 8>;
+            bindings = <&kp P>;
+        };
+
+        compatible = "zmk,combos";
+        combo_k {
+            timeout-ms = <50>;
+            key-positions = <9 10>;
+            bindings = <&kp K>;
+        };
+
+        compatible = "zmk,combos";
+        combo_excl {
+            timeout-ms = <50>;
+            key-positions = <10 11>;
+            bindings = <&kp EXCL>;
+        };
+
+        compatible = "zmk,combos";
+        combo_z {
+            timeout-ms = <50>;
+            key-positions = <12 13>;
+            bindings = <&kp Z>;
+        };
+
+        compatible = "zmk,combos";
+        combo_x {
+            timeout-ms = <50>;
+            key-positions = <13 14>;
+            bindings = <&kp X>;
+        };
+
+        compatible = "zmk,combos";
+        combo_qmark {
+            timeout-ms = <50>;
+            key-positions = <16 17>;
+            bindings = <&kp QMARK>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
