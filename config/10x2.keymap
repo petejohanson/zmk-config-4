@@ -60,23 +60,6 @@
 };
 
 / {
-    /*
-    trackball_listener {
-        compatible = "zmk,input-listener";
-        device = <&trackball>;
-        input-processors = <&zip_temp_layer MOUSE 1000>;
-     */  
-        snipe {
-            layers = <SNP>;
-            input-processors = <&zip_xy_scaler 1 4>;
-        }
-    /*
-        scroll {
-            layers = <SCROLL>;
-            input-processors = <&zip_xy_scaler 1 40>, <&zip_xy_to_scroll_mapper>;//, <&zip_scroll_transform (INPUT_TRANSFORM_Y_INVERT)>;
-        };
-    };
-    */
     combos {
 
         compatible = "zmk,combos";
