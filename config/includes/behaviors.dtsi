@@ -170,15 +170,5 @@ KEY POSITIONS (using keypos_def helpers)
             acceleration-exponent = <1>;
         };
 
-        mmv_listener {
-            compatible = "zmk,input-listener";
-            device = <&mm>;
-            input-processors = <&zip_temp_layer MSE 1000>;
-
-            snipe {
-                layers = <SNP>;
-                input-processors = <&zip_xy_scaler 1 4>;
-            };
-        };
     };
 };
