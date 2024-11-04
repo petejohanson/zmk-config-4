@@ -61,6 +61,20 @@
 
 / {
 
+    behaviors {
+
+        mmv_listener {
+            compatible = "zmk,input-listener";
+            device = <&mm>;
+            input-processors = <&zip_temp_layer MSE 1000>;
+
+            snipe {
+                layers = <SNP>;
+                input-processors = <&zip_xy_scaler 1 4>;
+            };
+        };
+    };
+
     combos {
 
         compatible = "zmk,combos";
