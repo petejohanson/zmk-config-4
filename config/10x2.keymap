@@ -30,6 +30,7 @@
 #define LALTT    &hrm LALT T
 #define MSEH     &lt MSE H
 #define SNPN     &lt SNP N
+#define SNPL     &mo SNP
 
 #define MIN   &kp MINUS
 #define BSP   &kp BSPC
@@ -190,7 +191,7 @@
             bindings = <
                 MS_U    MM_U    MS_D    MIN    UNDR  BSP
                 MM_L    MM_D    MM_R    NNN    NNN   NNN
-                MCK     RCK     LCK     NNN    SNP   CPST
+                MCK     RCK     LCK     NNN    SNPL  CPST
                 RCK     LCK
             >;
         };
