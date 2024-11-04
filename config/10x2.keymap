@@ -12,7 +12,6 @@
 #include <dt-bindings/zmk/mouse.h>
 #include "includes/macros.dtsi"
 #include "includes/behaviors.dtsi"
-#include "includes/combos_10x2.dtsi"
 
 #define DEF         0
 #define SYM         1
@@ -51,6 +50,13 @@
 #define RCK  &mkp RCLK  
 #define LCK  &mkp LCLK 
 
+#define COMBO(NAME, BINDINGS, KEYPOS, TERM) \
+    combo_##NAME { \
+        timeout-ms = <TERM>; \
+        bindings = <BINDINGS>; \
+        key-positions = <KEYPOS>; \
+    };
+
 
 &mt {
     tapping-term-ms = <160>;
@@ -75,6 +81,24 @@
             };
         };
     };
+
+    combos {
+        compatible = "zmk,combos";
+
+        COMBO(q,      &kp Q,       LT2 LT3, 50)
+        COMBO(b,      &kp B,       LT3 LT4, 50)
+        COMBO(j,      &kp J,       RT0 RT1, 50)
+        COMBO(bspc,   &kp BSPC,    RT1 RT2, 50)
+        COMBO(v,      &kp V,       LM2 LM3, 50)
+        COMBO(p,      &kp P,       LM3 LM4, 50)
+        COMBO(k,      &kp K,       RM0 RM1, 50)
+        COMBO(excl,   &kp EXCL,    RM1 RM2, 50)
+        COMBO(z,      &kp Z,       LB2 LB3, 50)
+        COMBO(x,      &kp X,       LB3 LB4, 50)
+        COMBO(qmark,  &kp QMARK,   RB1 RB2, 50)
+        };
+
+
 
     keymap {
         compatible = "zmk,keymap";
