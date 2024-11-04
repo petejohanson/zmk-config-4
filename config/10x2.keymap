@@ -65,15 +65,14 @@
 
     behaviors {
 
-        mmv_listener {
-            compatible = "zmk,input-listener";
-            device = <&mm>;
+        standard {
+            layers = <MSE>;
             input-processors = <&zip_xy_scaler 2 1>;
+        };
 
-            snipe {
-                layers = <SNP>;
-                input-processors = <&zip_xy_scaler 1 4>;
-            };
+        snipe {
+            layers = <SNP>;
+            input-processors = <&zip_xy_scaler 1 4>;
         };
     };
 
