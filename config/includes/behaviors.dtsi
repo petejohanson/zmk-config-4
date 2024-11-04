@@ -178,7 +178,7 @@ KEY POSITIONS (using keypos_def helpers)
             snipe {
                 layers = <SNP>;
                 input-processors = <&zip_xy_scaler 1 4>;
-            }
+            };
         };
     };
 };
