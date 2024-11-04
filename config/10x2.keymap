@@ -50,6 +50,7 @@
 #define RCK  &mkp RCLK  
 #define LCK  &mkp LCLK 
 
+
 &mt {
     tapping-term-ms = <160>;
 };
@@ -153,6 +154,7 @@
             bindings = <&kp QMARK>;
         };
     };
+
 
     keymap {
         compatible = "zmk,keymap";
