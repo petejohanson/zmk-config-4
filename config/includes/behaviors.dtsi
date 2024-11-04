@@ -180,6 +180,4 @@ KEY POSITIONS (using keypos_def helpers)
             };
         };
     };
-
-    };
 };
